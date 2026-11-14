@@ -4,7 +4,11 @@
 against the 31 places analog scientists already use.**
 
 NASA Space Apps Challenge 2026 · *Identify Earth Locations that Analog the
-Permanent Moon Base Locations and Mars* · Team ANKA, Ankara Local Event
+Permanent Moon Base Locations and Mars* · Team ANKA, Universal Event
+
+**[Open the interactive map →](https://adynatos15.github.io/terraanalog/)**
+Switch between the five target environments, click any candidate or known
+site for what holds and what breaks, or click anywhere on land for its score.
 
 ![Mars desert analog score for every land cell](docs/figures/map_mars_midlat.png)
 
@@ -282,6 +286,7 @@ python src/earth_features.py       # builds the 808,053-cell grid
 python scripts/run_analysis.py     # validation, ablation, candidates, stability
 python scripts/turkiye_case.py     # Türkiye case study
 python scripts/render_figures.py   # figures in docs/figures
+python scripts/build_web.py        # interactive map layers in docs/web
 streamlit run app.py
 python -m pytest tests             # 17 tests
 ```
@@ -293,6 +298,7 @@ redistribution, so the scripts fetch everything from the original sources.
 
 ```
 app.py                     Streamlit app: search, validation, gap, Türkiye
+docs/index.html            Static interactive map (GitHub Pages)
 src/modis_gibs.py          MODIS from NASA GIBS, decoded via colour tables
 src/earth_features.py      Global land grid: WorldClim + MODIS
 src/planet_profiles.py     Moon and Mars target environments, with rationale

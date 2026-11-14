@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TerraAnalog Map</title>
+<meta name="description" content="Interactive map of Earth locations that analog the Moon and Mars, scored from NASA MODIS and WorldClim data. NASA Space Apps 2026, Team ANKA.">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --night: #0E1420; --slate: #172033; --line: #26344F;
+  --paper: #F2EEE6; --muted: #8793A8; --soft: #B9C2D0;
+  --mars: #E8703F; --moon: #7CC4E4; --gold: #FFD9A0;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; background: var(--night); color: var(--paper);
+  font-family: Inter, Arial, sans-serif; font-size: 15px; line-height: 1.45; }
+.app { display: grid; grid-template-columns: 400px 1fr; height: 100vh; }
+aside { overflow-y: auto; border-right: 1px solid var(--line); padding: 24px 22px 32px; }
+#map { height: 100%; background: var(--night); }
+h1 { font-family: 'Space Grotesk', Arial, sans-serif; font-size: 28px; margin: 0; letter-spacing: -0.5px; }
+.sub { color: var(--muted); font-size: 13px; margin: 4px 0 18px; }
+.sub a { color: var(--soft); }
+.eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 2px; color: var(--muted); margin: 22px 0 8px; text-transform: uppercase; }
+.profiles { display: flex; flex-direction: column; gap: 6px; }
+.profiles button { all: unset; cursor: pointer; padding: 9px 12px; border-radius: 8px; border: 1px solid var(--line);
+  display: flex; justify-content: space-between; align-items: center; gap: 8px; font-size: 14px; }
+.profiles button:hover { border-color: var(--muted); }
+.profiles button:focus-visible { outline: 2px solid var(--moon); outline-offset: 2px; }
+.profiles button[aria-pressed="true"] { background: var(--slate); border-color: var(--mars); }
+.profiles .hint { display: block; font-size: 12px; color: var(--soft); }
+.body-moon { color: var(--moon); font-size: 11px; font-weight: 600; letter-spacing: 1px; }
+.body-mars { color: var(--mars); font-size: 11px; font-weight: 600; letter-spacing: 1px; }
+.badge { font-size: 11px; color: var(--night); background: var(--gold); border-radius: 4px; padding: 1px 6px; margin-left: 6px; }
+.stat { display: flex; gap: 12px; margin: 4px 0; }
+.stat div { flex: 1; background: var(--slate); border-radius: 8px; padding: 10px 12px; }
+.stat b { display: block; font-family: 'Space Grotesk', Arial, sans-serif; font-size: 24px; }
+.stat span { font-size: 12px; color: var(--soft); }
+.note { font-size: 13px; color: var(--soft); margin: 8px 0 0; }
+ol.cands { list-style: none; padding: 0; margin: 0; }
+ol.cands li { padding: 8px 10px; border-radius: 6px; cursor: pointer; display: grid; grid-template-columns: 26px 1fr auto; gap: 2px 6px; align-items: baseline; }
+ol.cands li:hover, ol.cands li:focus-visible { background: var(--slate); outline: none; }
+ol.cands .n { font-family: 'Space Grotesk', Arial, sans-serif; color: var(--mars); font-weight: 700; }
+ol.cands .place { font-size: 14px; }
+ol.cands .meta { font-size: 12px; color: var(--muted); grid-column: 2 / 4; }
+ol.cands .sc { font-size: 13px; color: var(--gold); }
+.legend { background: rgba(14,20,32,.88); padding: 10px 12px; border-radius: 8px; color: var(--paper); font: 12px Inter, Arial, sans-serif; }
+.legend .ramp { width: 180px; height: 10px; border-radius: 5px; margin: 6px 0 2px;
+  background: linear-gradient(90deg, #18233A 0%, #2F4A70 45%, #B4532F 72%, #E8703F 88%, #FFD9A0 100%); }
+.legend .ends { display: flex; justify-content: space-between; color: var(--muted); }
+.legend .key { display: flex; align-items: center; gap: 6px; margin-top: 6px; }
+.dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+.leaflet-popup-content-wrapper, .leaflet-popup-tip { background: var(--slate); color: var(--paper); }
+.leaflet-popup-content { font: 13px/1.45 Inter, Arial, sans-serif; margin: 12px 14px; }
+.leaflet-popup-content h3 { font: 600 15px 'Space Grotesk', Arial, sans-serif; margin: 0 0 4px; }
+.leaflet-popup-content .k { color: var(--muted); }
+.leaflet-container a.leaflet-popup-close-button { color: var(--muted); }
+.cand-icon { width: 24px; height: 24px; background: var(--mars); color: var(--night); border: 2px solid var(--paper); border-radius: 50%;
+  font: 700 12px 'Space Grotesk', Arial, sans-serif; display: flex; align-items: center; justify-content: center; }
+.tr-icon { width: 14px; height: 14px; background: var(--gold); border: 2px solid var(--night); border-radius: 50%; }
+footer { margin-top: 26px; font-size: 12px; color: var(--muted); }
+footer a { color: var(--soft); }
+@media (max-width: 820px) {
+  .app { grid-template-columns: 1fr; grid-template-rows: 55vh auto; height: auto; }
+  #map { height: 55vh; grid-row: 1; }
+  aside { grid-row: 2; border-right: 0; padding: 20px 16px 32px; }
+}
+</style>
+</head>
+<body>
+<div class="app">
+  <aside>
+    <h1>TerraAnalog</h1>
+    <p class="sub">Where on Earth looks most like the Moon or Mars. Every land cell scored from NASA MODIS and WorldClim. NASA Space Apps 2026 · Team ANKA · <a href="https://github.com/Adynatos15/terraanalog">code &amp; method</a></p>
+
+    <p class="eyebrow">Target environment</p>
+    <div class="profiles" id="profiles" role="group" aria-label="Target environment"></div>
+
+    <p class="eyebrow">Does it recognise known analog sites?</p>
+    <div class="stat" id="stat"></div>
+    <p class="note" id="statNote"></p>
+
+    <p class="eyebrow">Top candidates (not yet established sites)</p>
+    <ol class="cands" id="cands"></ol>
+
+    <p class="eyebrow">Best in Türkiye</p>
+    <ol class="cands" id="tr"></ol>
+
+    <footer>
+      Click anywhere on land to read its score (1° average). White rings are the established analog sites used for validation.
+      Scores rank Earth against Earth: 1.0 means as close to the target as any land on Earth gets, not equal to the Moon or Mars.
+      Ice sheets are masked. Resolution about 18 km: a shortlist of regions, not landing sites.
+      Data: NASA MODIS via GIBS (2020–2024), WorldClim 2.1, Natural Earth; place names © OpenStreetMap contributors.
+    </footer>
+  </aside>
+  <div id="map" aria-label="World map of analog scores"></div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>
+(function () {
+  "use strict";
+  const LABELS = {
+    mars_midlat: ["Mars desert", "MARS", "Physics: Mars as it is, cold"],
+    mars_midlat_practice: ["Mars desert, as practised", "MARS", "Temperature ignored, as field teams do"],
+    moon_mare: ["Moon mare", "MOON", "Equatorial basaltic plains"],
+    moon_polar: ["Moon south pole", "MOON", "Cold, dark, permanently shadowed"],
+    mars_polar: ["Mars polar", "MARS", "Ground ice and frozen desert"]
+  };
+  const NODATA = 255;
+  function trName(t) {
+    return (Math.abs(t.latitude - 37.75) < 0.01 && Math.abs(t.longitude - 33.75) < 0.01)
+      ? "Karapınar basin, Konya (12 km from Meke Maar)" : t.place_name;
+  }
+
+  const map = L.map("map", { worldCopyJump: true, minZoom: 2 }).setView([25, 40], 2);
+  const ESRI = "https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/";
+  L.tileLayer(ESRI + "World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}", {
+    attribution: "Basemap &copy; Esri, HERE, Garmin, &copy; OpenStreetMap contributors", maxZoom: 9
+  }).addTo(map);
+  map.createPane("labels");
+  map.getPane("labels").style.zIndex = 450;
+  map.getPane("labels").style.pointerEvents = "none";
+  L.tileLayer(ESRI + "World_Dark_Gray_Reference/MapServer/tile/{z}/{y}/{x}", {
+    pane: "labels", maxZoom: 9
+  }).addTo(map);
+
+  const legend = L.control({ position: "bottomright" });
+  legend.onAdd = function () {
+    const div = L.DomUtil.create("div", "legend");
+    div.innerHTML = "<b>Analog score</b><div class=\"ramp\"></div><div class=\"ends\"><span>0.30</span><span>0.90</span></div>" +
+      "<div class=\"key\"><span class=\"dot\" style=\"background:#E8703F;border:2px solid #F2EEE6\"></span>New candidate</div>" +
+      "<div class=\"key\"><span class=\"dot\" style=\"border:2px solid #F2EEE6\"></span>Established analog site</div>" +
+      "<div class=\"key\"><span class=\"dot\" style=\"background:#FFD9A0\"></span>Best in Türkiye</div>";
+    return div;
+  };
+  legend.addTo(map);
+
+  const markers = L.layerGroup().addTo(map);
+  let data = null, overlay = null, current = null;
+
+  function el(tag, cls, text) {
+    const e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (text !== undefined) e.textContent = text;
+    return e;
+  }
+  function esc(s) {
+    return String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "\"": "&quot;", "'": "&#39;" }[c]));
+  }
+  function fmt(v, d) { return (v === null || v === undefined || Number.isNaN(Number(v))) ? "–" : Number(v).toFixed(d); }
+  function k(label) { return "<span class=\"k\">" + label + "</span> "; }
+
+  function decodeLookup(b64) {
+    const bin = atob(b64), out = new Uint8Array(bin.length);
+    for (let i = 0; i < bin.length; i++) out[i] = bin.charCodeAt(i);
+    return out;
+  }
+
+  function candPopup(c) {
+    return "<h3>#" + c.rank + " " + esc(c.place_name) + "</h3>" +
+      k("Score") + fmt(c.analog_score, 3) + " · " + k("top") + fmt(c.top_percent, 2) + "% of land<br>" +
+      k("Holds in") + Math.round(c.stability * 100) + "% of 300 reweightings<br>" +
+      k("Surface") + "mean " + fmt(c.lst_mean_c, 1) + " °C, day–night swing " + fmt(c.lst_diurnal_range_c, 1) + " °C<br>" +
+      k("Rain") + fmt(c.annual_precip_mm, 0) + " mm/yr · " + k("greenest NDVI") + fmt(c.ndvi_max, 2) + "<br>" +
+      k("Elevation") + fmt(c.elevation_m, 0) + " m · " + fmt(c.known_site_distance_km, 0) + " km from nearest known site<br>" +
+      k("Holds:") + esc(c.strongest) + "<br>" + k("Breaks:") + esc(c.weakest);
+  }
+  function sitePopup(s) {
+    return "<h3>" + esc(s.site) + "</h3>" + esc(s.country) + " · chosen for " + esc(s.basis) + "<br>" +
+      k("Score") + fmt(s.analog_score, 3) + " · " + k("top") + fmt(s.top_percent, 1) + "% of land<br>" +
+      k("Ref.") + esc(s.reference);
+  }
+  function trPopup(t) {
+    return "<h3>Türkiye #" + t.rank + ": " + esc(trName(t)) + "</h3>" +
+      k("Score") + fmt(t.analog_score, 3) + " · " + k("global top") + fmt(t.global_top_percent, 1) + "%<br>" +
+      k("Swing") + fmt(t.lst_diurnal_range_c, 1) + " °C · " + k("rain") + fmt(t.annual_precip_mm, 0) + " mm · " +
+      k("NDVI") + fmt(t.ndvi_max, 2) + "<br>" + k("Holds:") + esc(t.strongest) + "<br>" + k("Breaks:") + esc(t.weakest);
+  }
+
+  function listItem(listEl, rank, title, meta, score, latlng, marker) {
+    const li = el("li");
+    li.tabIndex = 0;
+    li.append(el("span", "n", String(rank)), el("span", "place", title), el("span", "sc", score), el("span", "meta", meta));
+    const go = () => { map.flyTo(latlng, 5, { duration: 0.8 }); marker.openPopup(); };
+    li.addEventListener("click", go);
+    li.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); go(); } });
+    listEl.append(li);
+  }
+
+  function renderStats(key) {
+    const stat = document.getElementById("stat"), note = document.getElementById("statNote");
+    stat.replaceChildren();
+    const rows = data.validation.filter(v => v.profile === key);
+    const row = rows.find(v => v.sites === "environment" && v.n >= 3) || rows.find(v => v.sites === "all");
+    if (!row) { note.textContent = ""; return; }
+    const a = el("div"); a.append(el("b", null, fmt(row.auc, 2)), el("span", null, "AUC, this profile"));
+    const b = el("div"); b.append(el("b", null, fmt(row.baseline_auc, 2)), el("span", null, "rainfall alone"));
+    stat.append(a, b);
+    const ci = String(row.auc_ci).replace(/[\[\]]/g, "");
+    let t = row.n + " established sites (" + (row.sites === "all" ? "all" : "chosen for their environment") +
+      ") vs 50,000 random land cells; 0.5 = chance. 95% CI " + ci + ".";
+    if (key === "mars_midlat") t += " The physics profile loses to rainfall because established sites are warm and Mars is cold. That gap is our main finding.";
+    if (key === "mars_midlat_practice") t += " Derived after seeing the validation (temperature dropped), so this number is optimistic.";
+    if (key === "moon_mare") t += " Lunar mare sites are mostly chosen for geology, which climate data cannot see.";
+    note.textContent = t;
+  }
+
+  function divIcon(cls, html, size) {
+    return L.divIcon({ className: "", html: "<div class=\"" + cls + "\">" + html + "</div>", iconSize: [size, size], iconAnchor: [size / 2, size / 2] });
+  }
+
+  function select(key) {
+    current = key;
+    const prof = data.profiles.find(p => p.key === key);
+    prof._lookup = prof._lookup || decodeLookup(prof.lookup);
+    document.querySelectorAll("#profiles button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.key === key)));
+
+    if (overlay) map.removeLayer(overlay);
+    const m = data.scale.merc_lat;
+    overlay = L.imageOverlay("web/score_" + key + ".png", [[-m, -180], [m, 180]], { opacity: 0.85 }).addTo(map);
+
+    markers.clearLayers();
+    data.known_sites.filter(s => s.profile === key).forEach(s => {
+      L.circleMarker([s.latitude, s.longitude], { radius: 7, color: "#F2EEE6", weight: 2, fill: true, fillOpacity: 0 })
+        .bindPopup(sitePopup(s), { maxWidth: 320 }).addTo(markers);
+    });
+
+    const cands = document.getElementById("cands");
+    cands.replaceChildren();
+    data.candidates.filter(c => c.profile === key).forEach(c => {
+      const mk = L.marker([c.latitude, c.longitude], { icon: divIcon("cand-icon", String(c.rank), 24), zIndexOffset: 1000 - c.rank })
+        .bindPopup(candPopup(c), { maxWidth: 320 }).addTo(markers);
+      const meta = "top " + fmt(c.top_percent, 2) + "% · " + fmt(c.lst_mean_c, 0) + " °C mean surface · " + Math.round(c.stability * 100) + "% stable";
+      listItem(cands, c.rank, c.place_name, meta, fmt(c.analog_score, 2), [c.latitude, c.longitude], mk);
+    });
+
+    const tr = document.getElementById("tr");
+    tr.replaceChildren();
+    data.turkiye_top.filter(t => t.profile === key).slice(0, 3).forEach(t => {
+      const mk = L.marker([t.latitude, t.longitude], { icon: divIcon("tr-icon", "", 14) })
+        .bindPopup(trPopup(t), { maxWidth: 320 }).addTo(markers);
+      const meta = "global top " + fmt(t.global_top_percent, 1) + "% · swing " + fmt(t.lst_diurnal_range_c, 0) + " °C · rain " + fmt(t.annual_precip_mm, 0) + " mm";
+      listItem(tr, t.rank, trName(t), meta, fmt(t.analog_score, 2), [t.latitude, t.longitude], mk);
+    });
+
+    renderStats(key);
+    try { history.replaceState(null, "", "#" + key); } catch (e) { /* not allowed here; harmless */ }
+  }
+
+  map.on("click", e => {
+    if (!data || !current) return;
+    const prof = data.profiles.find(p => p.key === current);
+    const lat = e.latlng.lat, lon = ((e.latlng.lng + 180) % 360 + 360) % 360 - 180;
+    const r = Math.min(179, Math.max(0, Math.floor(90 - lat)));
+    const c = Math.min(359, Math.max(0, Math.floor(lon + 180)));
+    const v = prof._lookup[r * 360 + c];
+    const html = v === NODATA
+      ? "No land score here (ocean or ice sheet)."
+      : k(esc(LABELS[current][0]) + " score") + "<b>" + (v / 250).toFixed(2) + "</b><br>" +
+        k("1° cell at") + lat.toFixed(1) + ", " + lon.toFixed(1);
+    L.popup().setLatLng(e.latlng).setContent(html).openOn(map);
+  });
+
+  fetch("web/data.json").then(r => {
+    if (!r.ok) throw new Error("HTTP " + r.status);
+    return r.json();
+  }).then(d => {
+    data = d;
+    const wrap = document.getElementById("profiles");
+    data.profiles.forEach(p => {
+      const lab = LABELS[p.key] || [p.name, "", ""];
+      const b = el("button");
+      b.type = "button";
+      b.dataset.key = p.key;
+      const left = el("span");
+      left.append(el("span", null, lab[0]));
+      if (p.provenance !== "physics") left.append(el("span", "badge", "post hoc"));
+      left.append(el("span", "hint", lab[2]));
+      b.append(left, el("span", lab[1] === "MOON" ? "body-moon" : "body-mars", lab[1]));
+      b.addEventListener("click", () => select(p.key));
+      wrap.append(b);
+    });
+    const start = location.hash.slice(1);
+    select(data.profiles.some(p => p.key === start) ? start : "mars_midlat");
+  }).catch(err => {
+    document.getElementById("cands").textContent = "Could not load map data (" + err.message + ").";
+  });
+})();
+</script>
+</body>
+</html>
