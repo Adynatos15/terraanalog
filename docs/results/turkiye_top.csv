@@ -1,0 +1,26 @@
+profile,rank,place_name,latitude,longitude,analog_score,global_top_percent,elevation_m,annual_precip_mm,lst_diurnal_range_c,ndvi_max,strongest,weakest
+mars_midlat,1,"Central Anatolia Region, Konya, Turkey",37.75,33.75,0.578,35.7,1286,388,25.1,0.09,Day-night surface swing 0.91; Low pressure 0.72,Cold surface 0.35; Hyperaridity 0.45
+mars_midlat,2,"Central Anatolia Region, Konya, Turkey",38.583,32.583,0.577,35.9,1086,419,24.7,0.26,Terrain 0.98; Day-night surface swing 0.90,Cold surface 0.35; Hyperaridity 0.43
+mars_midlat,3,"Central Anatolia Region, Kayseri, Turkey",38.917,35.083,0.564,38.1,1206,384,24.3,0.35,Day-night surface swing 0.89; Terrain 0.73,Cold surface 0.36; Hyperaridity 0.46
+mars_midlat,4,"Eastern Anatolia Region, Malatya, Turkey",38.917,37.583,0.553,39.9,1543,454,21.5,0.4,Day-night surface swing 0.85; Low pressure 0.76,Cold surface 0.39; Hyperaridity 0.40
+mars_midlat,5,"Eastern Anatolia Region, Van, Turkey",38.583,43.917,0.552,40.1,2167,450,23.5,0.24,Day-night surface swing 0.88; Low pressure 0.83,Year-round dryness 0.35; Terrain 0.39
+mars_midlat_practice,1,"Central Anatolia Region, Konya, Turkey",37.75,33.75,0.623,32.1,1286,388,25.1,0.09,Day-night surface swing 0.91; Low pressure 0.72,Hyperaridity 0.45; Terrain 0.52
+mars_midlat_practice,2,"Central Anatolia Region, Konya, Turkey",38.583,32.583,0.621,32.3,1086,419,24.7,0.26,Terrain 0.98; Day-night surface swing 0.90,Hyperaridity 0.43; Year-round dryness 0.52
+mars_midlat_practice,3,"Central Anatolia Region, Kayseri, Turkey",38.917,35.083,0.602,34.7,1206,384,24.3,0.35,Day-night surface swing 0.89; Terrain 0.73,Hyperaridity 0.46; Year-round dryness 0.47
+mars_midlat_practice,4,"Southeastern Anatolia Region, Şanlıurfa, Turkey",36.75,38.917,0.598,35.2,368,327,20.1,0.33,Terrain 0.85; Year-round dryness 0.83,Low pressure 0.42; Hyperaridity 0.51
+mars_midlat_practice,5,"Eastern Anatolia Region, Malatya, Turkey",38.917,37.583,0.585,37.0,1543,454,21.5,0.4,Day-night surface swing 0.85; Low pressure 0.76,Hyperaridity 0.40; Year-round dryness 0.47
+moon_mare,1,"Central Anatolia Region, Konya, Turkey",37.75,33.75,0.692,10.0,1286,388,25.1,0.09,Day-night surface swing 0.91; Thermal amplitude 0.89,Aridity 0.45; Year-round dryness 0.52
+moon_mare,2,"Southeastern Anatolia Region, Şanlıurfa, Turkey",36.75,38.917,0.677,13.3,368,327,20.1,0.33,Thermal amplitude 0.98; Terrain ruggedness 0.88,Thin atmosphere 0.46; Aridity 0.51
+moon_mare,3,"Central Anatolia Region, Kayseri, Turkey",38.917,35.083,0.665,16.9,1206,384,24.3,0.35,Terrain ruggedness 0.98; Day-night surface swing 0.89,Aridity 0.46; Year-round dryness 0.47
+moon_mare,4,"Central Anatolia Region, Konya, Turkey",38.417,32.083,0.659,18.6,1100,397,20.1,0.23,Thermal amplitude 0.99; Terrain ruggedness 0.99,Year-round dryness 0.39; Aridity 0.45
+moon_mare,5,"Central Anatolia Region, Konya, Turkey",39.083,33.25,0.655,20.0,967,416,23.2,0.3,Terrain ruggedness 0.92; Thermal amplitude 0.88,Aridity 0.43; Year-round dryness 0.52
+moon_polar,1,"Eastern Anatolia Region, Van, Turkey",38.75,44.083,0.516,48.6,2110,434,23.0,0.63,Shadowing topography 0.92; Illumination extremes 0.76,Bare ground 0.39; Mean thermal regime 0.40
+moon_polar,2,"Eastern Anatolia Region, Ağrı, Turkey",39.417,42.583,0.49,52.5,1620,503,21.8,0.49,Shadowing topography 0.89; Illumination extremes 0.81,Mean thermal regime 0.36; Aridity 0.39
+moon_polar,3,"Central Anatolia Region, Sivas, Turkey",39.25,37.417,0.489,52.6,1567,446,23.1,0.33,Shadowing topography 0.98; Illumination extremes 0.55,Mean thermal regime 0.36; Extreme cold 0.39
+moon_polar,4,"Central Anatolia Region, Konya, Turkey",37.75,33.75,0.488,52.7,1286,388,25.1,0.09,Shadowing topography 0.95; Bare ground 0.66,Mean thermal regime 0.31; Extreme cold 0.34
+moon_polar,5,"Central Anatolia Region, Kayseri, Turkey",38.917,35.417,0.484,53.5,1235,383,20.9,0.27,Shadowing topography 0.97; Bare ground 0.55,Mean thermal regime 0.33; Extreme cold 0.35
+mars_polar,1,"Eastern Anatolia Region, Van, Turkey",38.75,44.25,0.578,43.5,2324,449,23.2,0.4,Seasonal cycling 1.00; Thin atmosphere 1.00,Permafrost regime 0.41; Polar desert 0.45
+mars_polar,2,"Eastern Anatolia Region, Iğdır, Turkey",39.917,43.917,0.559,46.3,1082,300,23.5,0.14,Seasonal cycling 0.95; Thin atmosphere 0.80,Permafrost regime 0.32; Winter extreme 0.38
+mars_polar,3,"Central Anatolia Region, Sivas, Turkey",39.083,37.25,0.55,47.8,1589,446,23.7,0.22,Seasonal cycling 0.95; Thin atmosphere 0.91,Permafrost regime 0.37; Winter extreme 0.40
+mars_polar,4,"Eastern Anatolia Region, Erzurum, Turkey",39.583,42.083,0.548,48.0,2107,568,21.2,0.56,Seasonal cycling 1.00; Thin atmosphere 0.97,Polar desert 0.35; Permafrost regime 0.43
+mars_polar,5,"Central Anatolia Region, Kayseri, Turkey",38.417,35.583,0.543,48.9,1568,426,22.8,0.3,Seasonal cycling 0.92; Thin atmosphere 0.90,Permafrost regime 0.38; Winter extreme 0.39

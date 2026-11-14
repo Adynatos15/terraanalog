@@ -1,0 +1,33 @@
+profile,sites,n,dimension,feature,target,weight,auc
+mars_midlat,environment,8,Hyperaridity,annual_precip_mm,0.0,3.0,0.79
+mars_midlat,environment,8,Bare ground,ndvi_max,0.0,2.0,0.656
+mars_midlat,environment,8,Low pressure,surface_pressure_hpa,0.05,2.0,0.518
+mars_midlat,environment,8,Cold surface,lst_mean_c,0.1,2.0,0.244
+mars_midlat,environment,8,Day-night surface swing,lst_diurnal_range_c,1.0,1.5,0.833
+mars_midlat,environment,8,Year-round dryness,driest_month_precip_mm,0.0,1.0,0.666
+mars_midlat,environment,8,Terrain,terrain_roughness_m,0.5,0.8,0.28
+mars_midlat_practice,environment,8,Hyperaridity,annual_precip_mm,0.0,3.0,0.789
+mars_midlat_practice,environment,8,Bare ground,ndvi_max,0.0,2.0,0.654
+mars_midlat_practice,environment,8,Low pressure,surface_pressure_hpa,0.05,2.0,0.519
+mars_midlat_practice,environment,8,Day-night surface swing,lst_diurnal_range_c,1.0,1.5,0.829
+mars_midlat_practice,environment,8,Year-round dryness,driest_month_precip_mm,0.0,1.0,0.666
+mars_midlat_practice,environment,8,Terrain,terrain_roughness_m,0.5,0.8,0.28
+moon_mare,all,12,Aridity,annual_precip_mm,0.0,3.0,0.398
+moon_mare,all,12,Day-night surface swing,lst_diurnal_range_c,1.0,2.5,0.743
+moon_mare,all,12,Bare ground,ndvi_max,0.0,2.0,0.436
+moon_mare,all,12,Terrain ruggedness,terrain_roughness_m,0.65,1.0,0.647
+moon_mare,all,12,Year-round dryness,driest_month_precip_mm,0.0,1.0,0.338
+moon_mare,all,12,Thermal amplitude,lst_annual_range_c,0.75,0.8,0.654
+moon_mare,all,12,Thin atmosphere,surface_pressure_hpa,0.15,0.8,0.56
+moon_polar,environment,3,Extreme cold,lst_night_min_c,0.0,3.0,0.809
+moon_polar,environment,3,Aridity,annual_precip_mm,0.05,2.0,0.769
+moon_polar,environment,3,Mean thermal regime,lst_mean_c,0.0,2.0,0.817
+moon_polar,environment,3,Bare ground,ndvi_max,0.0,1.5,0.747
+moon_polar,environment,3,Shadowing topography,terrain_roughness_m,0.7,1.2,0.506
+moon_polar,environment,3,Illumination extremes,temp_seasonality,0.8,0.8,0.564
+mars_polar,environment,4,Winter extreme,lst_night_min_c,0.02,2.5,0.764
+mars_polar,environment,4,Permafrost regime,lst_mean_c,0.05,2.0,0.773
+mars_polar,environment,4,Polar desert,annual_precip_mm,0.1,2.0,0.768
+mars_polar,environment,4,Bare ground,ndvi_max,0.0,1.5,0.729
+mars_polar,environment,4,Seasonal cycling,lst_annual_range_c,0.95,1.5,0.469
+mars_polar,environment,4,Thin atmosphere,surface_pressure_hpa,0.2,0.8,0.577

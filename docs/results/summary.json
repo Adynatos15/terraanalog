@@ -1,0 +1,7 @@
+{
+  "land_cells": 808053,
+  "modis_years": "2020-2024",
+  "known_sites": 31,
+  "stability_runs": 300,
+  "weight_spread": 0.5
+}

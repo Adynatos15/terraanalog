@@ -1,0 +1,61 @@
+profile,site,country,basis,used_for,analog_score,top_percent,reference,latitude,longitude
+mars_midlat,Qaidam Basin,China,environment,Mars,0.786,6.5,Xiao et al. (2017) Earth-Science Reviews 164:84,37.8,93.0
+mars_midlat,Licancabur and the High Andes lakes,Bolivia / Chile,environment,Mars,0.708,20.6,"Cabrol et al. (2009) J. Geophys. Res. 114, G00D06 (High-Lakes Project)",-22.83,-67.88
+mars_midlat,Atacama Desert (Yungay),Chile,environment,Mars,0.69,22.0,Navarro-Gonzalez et al. (2003) Science 302:1018,-24.1,-70.0
+mars_midlat,McMurdo Dry Valleys (Beacon Valley),Antarctica,environment,Mars / Moon,0.681,22.6,Marchant & Head (2007) Icarus 192:187,-77.82,160.65
+mars_midlat,"Mars Desert Research Station, Utah",United States,operations,Mars,0.639,27.0,"The Mars Society, MDRS (2001-present)",38.41,-110.79
+mars_midlat,Erfoud - Merzouga (Ibn Battuta Centre sites),Morocco,environment,Mars,0.612,30.8,Ori et al. (2013) Planetary and Space Science (Ibn Battuta Centre),31.1,-4.0
+mars_midlat,Ramon Crater (D-MARS),Israel,operations,Mars,0.59,33.9,D-MARS / Israel Space Agency analog missions (2018-present),30.6,34.8
+mars_midlat,Lanzarote (La Corona lava tube),Spain,geology,Mars / Moon,0.53,44.3,Sauro et al. (2020) Earth-Science Reviews 209:103288,29.15,-13.47
+mars_midlat,Death Valley,United States,environment,Mars,0.51,48.6,Preston & Dartnell (2014) Int. J. Astrobiology 13:81 (review),36.5,-117.0
+mars_midlat,Arkaroola,Australia,environment,Mars,0.492,52.6,Thomas & Walter (2002) Australian Mars Exploration Conference,-30.3,139.35
+mars_midlat,Tenerife (Teide),Spain,geology,Mars,0.481,54.9,Lalla et al. (2016) Geoscience Frontiers 7:673,28.27,-16.64
+mars_midlat,Pilbara (Strelley Pool),Australia,geology,Mars,0.476,55.9,Allwood et al. (2006) Nature 441:714,-21.2,119.7
+mars_midlat,Salda Lake,Turkiye,geology,Mars,0.473,56.4,Garczynski et al. (2020) Lunar and Planetary Science Conference LI,37.55,29.68
+mars_midlat,Mauna Kea (Pu'u Nene),United States,geology,Mars / Moon,0.468,57.4,Allen et al. (1998) Lunar and Planetary Science XXIX (JSC Mars-1),19.7,-155.45
+mars_midlat,Pavilion Lake,Canada,operations,Mars / Moon,0.457,59.7,Lim et al. (2011) GSA Special Paper 483:85 (PLRP),50.86,-121.74
+mars_midlat,Rio Tinto,Spain,geology,Mars,0.421,66.0,Fernandez-Remolar et al. (2005) Earth Planet. Sci. Lett. 240:149,37.72,-6.56
+mars_midlat,Holuhraun,Iceland,geology,Mars,0.417,66.8,Ewing et al. (2019) LPSC L (SAND-E project),64.87,-16.83
+mars_midlat,Dallol / Danakil Depression,Ethiopia,environment,Mars,0.399,69.7,Cavalazzi et al. (2019) Astrobiology 19:553,14.24,40.3
+mars_midlat,Lonar Crater,India,geology,Mars / Moon,0.386,71.9,Fredriksson et al. (1973) Science 180:862,19.98,76.51
+mars_midlat,"Ka'u Desert, Kilauea",United States,geology,Mars,0.332,82.2,"Seelos et al. (2010) Geophys. Res. Lett. 37, L01202",19.35,-155.33
+mars_midlat_practice,Qaidam Basin,China,environment,Mars,0.86,0.0,Xiao et al. (2017) Earth-Science Reviews 164:84,37.8,93.0
+mars_midlat_practice,Atacama Desert (Yungay),Chile,environment,Mars,0.797,0.5,Navarro-Gonzalez et al. (2003) Science 302:1018,-24.1,-70.0
+mars_midlat_practice,Licancabur and the High Andes lakes,Bolivia / Chile,environment,Mars,0.767,5.3,"Cabrol et al. (2009) J. Geophys. Res. 114, G00D06 (High-Lakes Project)",-22.83,-67.88
+mars_midlat_practice,Erfoud - Merzouga (Ibn Battuta Centre sites),Morocco,environment,Mars,0.716,19.6,Ori et al. (2013) Planetary and Space Science (Ibn Battuta Centre),31.1,-4.0
+mars_midlat_practice,"Mars Desert Research Station, Utah",United States,operations,Mars,0.703,22.4,"The Mars Society, MDRS (2001-present)",38.41,-110.79
+mars_midlat_practice,Ramon Crater (D-MARS),Israel,operations,Mars,0.667,27.2,D-MARS / Israel Space Agency analog missions (2018-present),30.6,34.8
+mars_midlat_practice,McMurdo Dry Valleys (Beacon Valley),Antarctica,environment,Mars / Moon,0.649,29.1,Marchant & Head (2007) Icarus 192:187,-77.82,160.65
+mars_midlat_practice,Death Valley,United States,environment,Mars,0.6,35.0,Preston & Dartnell (2014) Int. J. Astrobiology 13:81 (review),36.5,-117.0
+mars_midlat_practice,Lanzarote (La Corona lava tube),Spain,geology,Mars / Moon,0.577,38.1,Sauro et al. (2020) Earth-Science Reviews 209:103288,29.15,-13.47
+mars_midlat_practice,Pilbara (Strelley Pool),Australia,geology,Mars,0.564,39.8,Allwood et al. (2006) Nature 441:714,-21.2,119.7
+mars_midlat_practice,Arkaroola,Australia,environment,Mars,0.536,43.5,Thomas & Walter (2002) Australian Mars Exploration Conference,-30.3,139.35
+mars_midlat_practice,Tenerife (Teide),Spain,geology,Mars,0.507,48.4,Lalla et al. (2016) Geoscience Frontiers 7:673,28.27,-16.64
+mars_midlat_practice,Salda Lake,Turkiye,geology,Mars,0.495,50.4,Garczynski et al. (2020) Lunar and Planetary Science Conference LI,37.55,29.68
+mars_midlat_practice,Mauna Kea (Pu'u Nene),United States,geology,Mars / Moon,0.493,50.7,Allen et al. (1998) Lunar and Planetary Science XXIX (JSC Mars-1),19.7,-155.45
+mars_midlat_practice,Dallol / Danakil Depression,Ethiopia,environment,Mars,0.477,53.7,Cavalazzi et al. (2019) Astrobiology 19:553,14.24,40.3
+mars_midlat_practice,Pavilion Lake,Canada,operations,Mars / Moon,0.457,57.5,Lim et al. (2011) GSA Special Paper 483:85 (PLRP),50.86,-121.74
+mars_midlat_practice,Rio Tinto,Spain,geology,Mars,0.444,60.0,Fernandez-Remolar et al. (2005) Earth Planet. Sci. Lett. 240:149,37.72,-6.56
+mars_midlat_practice,Lonar Crater,India,geology,Mars / Moon,0.442,60.3,Fredriksson et al. (1973) Science 180:862,19.98,76.51
+mars_midlat_practice,Holuhraun,Iceland,geology,Mars,0.383,71.0,Ewing et al. (2019) LPSC L (SAND-E project),64.87,-16.83
+mars_midlat_practice,"Ka'u Desert, Kilauea",United States,geology,Mars,0.33,79.7,"Seelos et al. (2010) Geophys. Res. Lett. 37, L01202",19.35,-155.33
+moon_mare,Kilbourne Hole,United States,geology,Moon,0.721,7.1,Schmitt (1987) Lunar Bases and Space Activities of the 21st Century,31.97,-106.97
+moon_mare,Meteor Crater (Barringer),United States,geology,Moon,0.681,12.4,"Kring (2017) Guidebook to the Geology of Barringer Meteorite Crater, LPI",35.03,-111.02
+moon_mare,"SP Crater, San Francisco Volcanic Field",United States,operations,Moon,0.67,15.4,Ross et al. (2013) Acta Astronautica 90:182 (Desert RATS),35.58,-111.63
+moon_mare,Lanzarote (La Corona lava tube),Spain,geology,Mars / Moon,0.629,29.2,Sauro et al. (2020) Earth-Science Reviews 209:103288,29.15,-13.47
+moon_mare,Craters of the Moon,United States,geology,Moon,0.578,39.8,Hughes et al. (2019) Planetary and Space Science 169:15 (FINESSE),43.42,-113.52
+moon_mare,Mauna Kea (Pu'u Nene),United States,geology,Mars / Moon,0.569,41.3,Allen et al. (1998) Lunar and Planetary Science XXIX (JSC Mars-1),19.7,-155.45
+moon_mare,"Haughton Crater, Devon Island",Canada,environment,Mars / Moon,0.552,44.2,Lee & Osinski (2005) Meteoritics & Planetary Science 40:1755,75.38,-89.68
+moon_mare,Pavilion Lake,Canada,operations,Mars / Moon,0.513,53.0,Lim et al. (2011) GSA Special Paper 483:85 (PLRP),50.86,-121.74
+moon_mare,Lonar Crater,India,geology,Mars / Moon,0.472,62.8,Fredriksson et al. (1973) Science 180:862,19.98,76.51
+moon_mare,Mistastin Lake impact structure,Canada,geology,Moon,0.447,68.2,Mader & Osinski (2018) Geochim. Cosmochim. Acta 236:214,55.88,-63.31
+moon_mare,Sudbury impact structure,Canada,geology,Moon,0.422,72.7,Phinney et al. (1978) Proc. 9th Lunar Planet. Sci. Conf. (Apollo training),46.6,-81.18
+moon_mare,Nordlinger Ries Crater,Germany,geology,Moon,0.372,81.5,Phinney et al. (1978) Proc. 9th Lunar Planet. Sci. Conf. (Apollo training),48.88,10.56
+moon_polar,"Concordia Station, Dome C",Antarctica,environment,Mars / Moon,0.816,13.3,ESA Concordia isolation studies (2005-present),-75.1,123.33
+moon_polar,McMurdo Dry Valleys (Beacon Valley),Antarctica,environment,Mars / Moon,0.755,21.0,Marchant & Head (2007) Icarus 192:187,-77.82,160.65
+moon_polar,"Haughton Crater, Devon Island",Canada,environment,Mars / Moon,0.722,24.0,Lee & Osinski (2005) Meteoritics & Planetary Science 40:1755,75.38,-89.68
+mars_polar,"Concordia Station, Dome C",Antarctica,environment,Mars / Moon,0.894,0.4,ESA Concordia isolation studies (2005-present),-75.1,123.33
+mars_polar,McMurdo Dry Valleys (Beacon Valley),Antarctica,environment,Mars / Moon,0.736,20.9,Marchant & Head (2007) Icarus 192:187,-77.82,160.65
+mars_polar,"Haughton Crater, Devon Island",Canada,environment,Mars / Moon,0.674,28.2,Lee & Osinski (2005) Meteoritics & Planetary Science 40:1755,75.38,-89.68
+mars_polar,Axel Heiberg Island (Expedition Fiord),Canada,environment,Mars,0.664,30.0,"Andersen, Pollard & McKay (2002) J. Geophys. Res. 107(E3)",79.4,-90.75
+mars_polar,Svalbard (Bockfjorden volcanic complex),Norway,geology,Mars,0.493,57.2,Steele et al. (2007) Meteoritics & Planetary Science 42:1549 (AMASE),79.43,13.33

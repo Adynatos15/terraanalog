@@ -1,0 +1,33 @@
+profile,sites,n,removed,auc,change
+mars_midlat,environment,8,Hyperaridity,0.561,-0.097
+mars_midlat,environment,8,Bare ground,0.636,-0.022
+mars_midlat,environment,8,Low pressure,0.685,0.027
+mars_midlat,environment,8,Cold surface,0.766,0.108
+mars_midlat,environment,8,Day-night surface swing,0.599,-0.059
+mars_midlat,environment,8,Year-round dryness,0.652,-0.006
+mars_midlat,environment,8,Terrain,0.674,0.016
+mars_midlat_practice,environment,8,Hyperaridity,0.691,-0.075
+mars_midlat_practice,environment,8,Bare ground,0.764,-0.002
+mars_midlat_practice,environment,8,Low pressure,0.822,0.055
+mars_midlat_practice,environment,8,Day-night surface swing,0.681,-0.085
+mars_midlat_practice,environment,8,Year-round dryness,0.772,0.005
+mars_midlat_practice,environment,8,Terrain,0.789,0.023
+moon_mare,all,12,Aridity,0.68,0.121
+moon_mare,all,12,Day-night surface swing,0.448,-0.111
+moon_mare,all,12,Bare ground,0.601,0.042
+moon_mare,all,12,Terrain ruggedness,0.539,-0.02
+moon_mare,all,12,Year-round dryness,0.598,0.039
+moon_mare,all,12,Thermal amplitude,0.548,-0.011
+moon_mare,all,12,Thin atmosphere,0.557,-0.002
+moon_polar,environment,3,Extreme cold,0.796,-0.011
+moon_polar,environment,3,Aridity,0.789,-0.018
+moon_polar,environment,3,Mean thermal regime,0.799,-0.007
+moon_polar,environment,3,Bare ground,0.815,0.008
+moon_polar,environment,3,Shadowing topography,0.819,0.012
+moon_polar,environment,3,Illumination extremes,0.808,0.001
+mars_polar,environment,4,Winter extreme,0.805,0.005
+mars_polar,environment,4,Permafrost regime,0.789,-0.011
+mars_polar,environment,4,Polar desert,0.769,-0.032
+mars_polar,environment,4,Bare ground,0.793,-0.008
+mars_polar,environment,4,Seasonal cycling,0.794,-0.007
+mars_polar,environment,4,Thin atmosphere,0.805,0.004

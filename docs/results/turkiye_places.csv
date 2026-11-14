@@ -1,0 +1,41 @@
+profile,place,analog_score,global_top_percent,turkiye_rank,turkiye_cells,strongest,weakest,why
+mars_midlat,Salda Lake,0.473,56.4,1297,2900,Day-night surface swing 0.79; Low pressure 0.71,Terrain 0.26; Year-round dryness 0.30,Established Mars analog: hydromagnesite carbonates compared with Jezero crater.
+mars_midlat,Meke Maar and Karapinar volcanic field,0.529,44.6,257,2900,Day-night surface swing 0.88; Low pressure 0.66,Cold surface 0.35; Hyperaridity 0.43,Maar crater and cinder cones in the driest basin in Turkiye.
+mars_midlat,Tuz Golu (Salt Lake),0.555,39.6,26,2900,Terrain 0.95; Bare ground 0.69,Cold surface 0.36; Hyperaridity 0.40,Large evaporite flat in the Central Anatolian closed basin.
+mars_midlat,Kula,0.437,63.4,1899,2900,Day-night surface swing 0.79; Low pressure 0.58,Hyperaridity 0.26; Cold surface 0.32,Young basaltic lava flows and cinder cones.
+mars_midlat,Cappadocia (Goreme),0.536,43.1,175,2900,Day-night surface swing 0.88; Low pressure 0.73,Terrain 0.23; Cold surface 0.35,Eroded ignimbrite landscape; aeolian and fluvial erosion forms.
+mars_midlat,Karacadag,0.46,59.1,1579,2900,Day-night surface swing 0.83; Low pressure 0.72,Terrain 0.16; Hyperaridity 0.23,Basaltic shield volcano with extensive lava plains.
+mars_midlat,Nemrut,0.484,54.4,1067,2900,Low pressure 0.82; Day-night surface swing 0.78,Terrain 0.19; Hyperaridity 0.21,High-altitude caldera with crater lakes.
+mars_midlat,Erzurum-Kars,0.478,55.4,1180,2900,Low pressure 0.82; Day-night surface swing 0.75,Terrain 0.13; Year-round dryness 0.18,"High, cold eastern plateau with long, hard winters."
+mars_midlat_practice,Salda Lake,0.495,50.4,1211,2900,Day-night surface swing 0.79; Low pressure 0.71,Terrain 0.26; Year-round dryness 0.30,Established Mars analog: hydromagnesite carbonates compared with Jezero crater.
+mars_midlat_practice,Meke Maar and Karapinar volcanic field,0.564,39.8,231,2900,Day-night surface swing 0.88; Low pressure 0.66,Hyperaridity 0.43; Bare ground 0.45,Maar crater and cinder cones in the driest basin in Turkiye.
+mars_midlat_practice,Tuz Golu (Salt Lake),0.593,36.0,33,2900,Terrain 0.95; Bare ground 0.69,Hyperaridity 0.40; Year-round dryness 0.59,Large evaporite flat in the Central Anatolian closed basin.
+mars_midlat_practice,Kula,0.459,57.1,1803,2900,Day-night surface swing 0.79; Low pressure 0.58,Hyperaridity 0.26; Terrain 0.33,Young basaltic lava flows and cinder cones.
+mars_midlat_practice,Cappadocia (Goreme),0.572,38.8,157,2900,Day-night surface swing 0.88; Low pressure 0.73,Terrain 0.23; Hyperaridity 0.46,Eroded ignimbrite landscape; aeolian and fluvial erosion forms.
+mars_midlat_practice,Karacadag,0.49,51.3,1298,2900,Day-night surface swing 0.83; Low pressure 0.72,Terrain 0.16; Hyperaridity 0.23,Basaltic shield volcano with extensive lava plains.
+mars_midlat_practice,Nemrut,0.489,51.5,1331,2900,Low pressure 0.82; Day-night surface swing 0.78,Terrain 0.19; Hyperaridity 0.21,High-altitude caldera with crater lakes.
+mars_midlat_practice,Erzurum-Kars,0.478,53.5,1555,2900,Low pressure 0.82; Day-night surface swing 0.75,Terrain 0.13; Year-round dryness 0.18,"High, cold eastern plateau with long, hard winters."
+moon_mare,Salda Lake,0.567,41.5,1170,2900,Thermal amplitude 0.92; Day-night surface swing 0.79,Year-round dryness 0.30; Aridity 0.34,Established Mars analog: hydromagnesite carbonates compared with Jezero crater.
+moon_mare,Meke Maar and Karapinar volcanic field,0.646,23.2,125,2900,Thermal amplitude 0.96; Terrain ruggedness 0.89,Aridity 0.43; Bare ground 0.45,Maar crater and cinder cones in the driest basin in Turkiye.
+moon_mare,Tuz Golu (Salt Lake),0.6,36.6,658,2900,Terrain ruggedness 0.80; Thermal amplitude 0.76,Aridity 0.40; Year-round dryness 0.59,Large evaporite flat in the Central Anatolian closed basin.
+moon_mare,Kula,0.546,45.5,1538,2900,Thermal amplitude 0.92; Day-night surface swing 0.79,Aridity 0.26; Year-round dryness 0.42,Young basaltic lava flows and cinder cones.
+moon_mare,Cappadocia (Goreme),0.64,25.3,170,2900,Day-night surface swing 0.88; Thermal amplitude 0.86,Aridity 0.46; Year-round dryness 0.47,Eroded ignimbrite landscape; aeolian and fluvial erosion forms.
+moon_mare,Karacadag,0.561,42.6,1286,2900,Thermal amplitude 0.86; Day-night surface swing 0.83,Aridity 0.23; Bare ground 0.47,Basaltic shield volcano with extensive lava plains.
+moon_mare,Nemrut,0.542,46.3,1606,2900,Thin atmosphere 0.92; Thermal amplitude 0.81,Aridity 0.21; Year-round dryness 0.39,High-altitude caldera with crater lakes.
+moon_mare,Erzurum-Kars,0.542,46.3,1608,2900,Thermal amplitude 0.99; Thin atmosphere 0.91,Year-round dryness 0.18; Aridity 0.36,"High, cold eastern plateau with long, hard winters."
+moon_polar,Salda Lake,0.417,65.4,1437,2900,Shadowing topography 0.76; Bare ground 0.48,Mean thermal regime 0.32; Extreme cold 0.33,Established Mars analog: hydromagnesite carbonates compared with Jezero crater.
+moon_polar,Meke Maar and Karapinar volcanic field,0.456,58.6,483,2900,Shadowing topography 0.97; Illumination extremes 0.49,Mean thermal regime 0.32; Extreme cold 0.34,Maar crater and cinder cones in the driest basin in Turkiye.
+moon_polar,Tuz Golu (Salt Lake),0.456,58.7,492,2900,Shadowing topography 0.75; Bare ground 0.69,Extreme cold 0.32; Mean thermal regime 0.33,Large evaporite flat in the Central Anatolian closed basin.
+moon_polar,Kula,0.386,70.1,2051,2900,Shadowing topography 0.81; Illumination extremes 0.46,Aridity 0.27; Mean thermal regime 0.29,Young basaltic lava flows and cinder cones.
+moon_polar,Cappadocia (Goreme),0.451,59.6,617,2900,Shadowing topography 0.74; Bare ground 0.55,Mean thermal regime 0.32; Extreme cold 0.35,Eroded ignimbrite landscape; aeolian and fluvial erosion forms.
+moon_polar,Karacadag,0.392,69.2,1941,2900,Illumination extremes 0.76; Shadowing topography 0.68,Aridity 0.24; Mean thermal regime 0.27,Basaltic shield volcano with extensive lava plains.
+moon_polar,Nemrut,0.44,61.4,863,2900,Shadowing topography 0.71; Illumination extremes 0.63,Aridity 0.22; Extreme cold 0.41,High-altitude caldera with crater lakes.
+moon_polar,Erzurum-Kars,0.463,57.3,294,2900,Illumination extremes 0.71; Shadowing topography 0.66,Aridity 0.38; Bare ground 0.40,"High, cold eastern plateau with long, hard winters."
+mars_polar,Salda Lake,0.463,62.3,1445,2900,Thin atmosphere 0.84; Seasonal cycling 0.72,Winter extreme 0.34; Permafrost regime 0.34,Established Mars analog: hydromagnesite carbonates compared with Jezero crater.
+mars_polar,Meke Maar and Karapinar volcanic field,0.487,58.2,1039,2900,Seasonal cycling 0.82; Thin atmosphere 0.78,Permafrost regime 0.33; Winter extreme 0.34,Maar crater and cinder cones in the driest basin in Turkiye.
+mars_polar,Tuz Golu (Salt Lake),0.479,59.5,1171,2900,Thin atmosphere 0.75; Bare ground 0.69,Winter extreme 0.33; Permafrost regime 0.34,Large evaporite flat in the Central Anatolian closed basin.
+mars_polar,Kula,0.415,69.4,2012,2900,Seasonal cycling 0.72; Thin atmosphere 0.69,Polar desert 0.28; Winter extreme 0.31,Young basaltic lava flows and cinder cones.
+mars_polar,Cappadocia (Goreme),0.529,51.3,246,2900,Seasonal cycling 0.90; Thin atmosphere 0.87,Permafrost regime 0.33; Winter extreme 0.36,Eroded ignimbrite landscape; aeolian and fluvial erosion forms.
+mars_polar,Karacadag,0.45,64.5,1656,2900,Seasonal cycling 0.90; Thin atmosphere 0.86,Polar desert 0.26; Permafrost regime 0.29,Basaltic shield volcano with extensive lava plains.
+mars_polar,Nemrut,0.518,53.0,407,2900,Thin atmosphere 0.98; Seasonal cycling 0.94,Polar desert 0.24; Winter extreme 0.42,High-altitude caldera with crater lakes.
+mars_polar,Erzurum-Kars,0.518,53.0,406,2900,Thin atmosphere 0.97; Seasonal cycling 0.78,Polar desert 0.40; Bare ground 0.40,"High, cold eastern plateau with long, hard winters."

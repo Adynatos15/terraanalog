@@ -1,0 +1,14 @@
+# Source data is fetched by scripts/download_data.py; WorldClim's licence
+# does not allow redistribution.
+data/
+
+# Earlier prototype for a different challenge
+archive/
+
+# Local tooling and notes
+.claude/
+PLAN.md
+SUBMISSION.md
+__pycache__/
+.pytest_cache/
+*.pyc

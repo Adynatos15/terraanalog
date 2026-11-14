@@ -1,0 +1,18 @@
+profile,sites,n,auc,auc_ci,baseline_auc,provenance
+mars_midlat,environment,8,0.659,"[0.525, 0.787]",0.79,physics
+mars_midlat,geology,9,0.384,"[0.312, 0.453]",0.307,physics
+mars_midlat,operations,3,0.599,"[0.405, 0.731]",0.574,physics
+mars_midlat,all,20,0.526,"[0.438, 0.613]",0.54,physics
+mars_midlat_practice,environment,8,0.767,"[0.632, 0.895]",0.79,calibrated after validation (post hoc)
+mars_midlat_practice,geology,9,0.446,"[0.359, 0.527]",0.305,calibrated after validation (post hoc)
+mars_midlat_practice,operations,3,0.643,"[0.424, 0.775]",0.573,calibrated after validation (post hoc)
+mars_midlat_practice,all,20,0.604,"[0.51, 0.696]",0.539,calibrated after validation (post hoc)
+moon_mare,environment,1,0.559,"[nan, nan]",0.661,physics
+moon_mare,geology,9,0.54,"[0.383, 0.709]",0.363,physics
+moon_mare,operations,2,0.659,"[0.473, 0.846]",0.435,physics
+moon_mare,all,12,0.561,"[0.432, 0.693]",0.4,physics
+moon_polar,environment,3,0.807,"[0.761, 0.868]",0.77,physics
+moon_polar,all,3,0.807,"[0.761, 0.868]",0.77,physics
+mars_polar,environment,4,0.803,"[0.71, 0.927]",0.757,physics
+mars_polar,geology,1,0.429,"[nan, nan]",0.37,physics
+mars_polar,all,5,0.728,"[0.56, 0.885]",0.679,physics
